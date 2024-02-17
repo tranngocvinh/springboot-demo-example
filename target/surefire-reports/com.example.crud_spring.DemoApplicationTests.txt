@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+Test set: com.example.crud_spring.DemoApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 14.279 s <<< FAILURE! - in com.example.crud_spring.DemoApplicationTests
+contextLoads  Time elapsed: 0.028 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@5906ebfb testClass = com.example.crud_spring.DemoApplicationTests, locations = [], classes = [com.example.crud_spring.DemoApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@15aab8c6, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6babf3bf, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@28f3b248, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@78123e82, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@9da1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3f6b0be5, org.springframework.boot.test.context.SpringBootTestAnnotation@7e67b75f], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalStateException: PostInitCallback queue could not be processed...
+        - PostInitCallbackEntry - Entity(com.example.crud_spring.Customer) `sqmMultiTableInsertStrategy` interpretation
+
+Caused by: jakarta.persistence.PersistenceException: 
+[PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalStateException: PostInitCallback queue could not be processed...
+        - PostInitCallbackEntry - Entity(com.example.crud_spring.Customer) `sqmMultiTableInsertStrategy` interpretation
+
+Caused by: java.lang.IllegalStateException: 
+PostInitCallback queue could not be processed...
+        - PostInitCallbackEntry - Entity(com.example.crud_spring.Customer) `sqmMultiTableInsertStrategy` interpretation
+
+

@@ -1,7 +1,6 @@
 package com.example.crud_spring;
 
 import org.springframework.stereotype.Repository;
-import static org.assertj.core.api.Assertions.assertThat;
 
 
 import java.util.List;

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.example.crud_spring.CustomerRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.675 s - in com.example.crud_spring.CustomerRepositoryTest

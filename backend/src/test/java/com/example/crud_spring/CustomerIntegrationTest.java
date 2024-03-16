@@ -1,4 +1,4 @@
-package com.example.crud_spring.journy;
+package com.example.crud_spring;
 
 import com.example.crud_spring.Customer;
 import com.example.crud_spring.CustomerRegistrationRequest;

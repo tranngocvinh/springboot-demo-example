@@ -1,16 +1,19 @@
 package com.example.crud_spring;
 
+import com.amazonaws.services.secretsmanager.model.ResourceNotFoundException;
 import com.sun.jdi.request.DuplicateRequestException;
+import org.hibernate.ResourceClosedException;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CustomerService {
     private final CustomerDao customerDao ;
 
-    public CustomerService(@Qualifier("jpa") CustomerDao customerDao) {
+    public CustomerService(@Qualifier("jdbc") CustomerDao customerDao) {
         this.customerDao = customerDao;
     }
 
@@ -20,7 +23,7 @@ public class CustomerService {
 
     public Customer getCustomer(Integer id){
         return customerDao.selectCustomerById(id)
-                .orElseThrow(() -> new IllegalArgumentException("customer with id [%s] not found".formatted(id))) ;
+               .orElseThrow(() -> new ResourceNotFoundException("customer with id [%s] not found".formatted(id))) ;
     }
     //add
     public void addCustomer(CustomerRegistrationRequest customerRegistrationRequest){

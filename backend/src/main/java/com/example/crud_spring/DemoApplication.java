@@ -15,9 +15,11 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
+//test ci thui :)))
 
 	@Bean
 	CommandLineRunner runner(CustomerRepository customerRepository){
+
 		return args -> {
 			var faker = new Faker() ;
 			Random random = new Random() ;

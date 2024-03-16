@@ -17,7 +17,7 @@ services:
       container_name: vinhtran-api
       image: vinhtran2109/demo1
       environment:
-        SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/customer
+        SPRING_DATASOURCE_URL: jdbc:postgresql://db:5332/customer
       ports:
         - "8080:8080"
       networks:

@@ -78,7 +78,7 @@ jobs:
         run: >
             curl -X POST -H 'Content-type: application/json' 
             --data '{"text":":aws: Starting deployment to Elastic Beanstalk"}' 
-            ${{ secrets.SLACK_WEBHOOK_URL }
+            ${{ secrets.SLACK_WEBHOOK_URL }}
       - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v21
         with:

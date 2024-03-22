@@ -27,6 +27,7 @@ public class DemoApplication {
 			Customer b = new Customer(faker.name().fullName(),faker.internet().emailAddress(), random.nextInt(15,99)) ;
 			List<Customer> list = List.of(a,b) ;
 			//customerRepository.saveAll(list) ;
+			//FDFDD
 
 		};
 	}
